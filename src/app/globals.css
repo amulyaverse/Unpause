@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --deep-purple: #30205C;
+  --electric-lavender: #7655E9;
+  --soft-lavender: #C5B4FF;
+  --lime: #D9F36A;
+  --off-white: #F8F6F0;
+  
+  --navy: #30205C;
+  --lavender: #7655E9;
+  --lavender-light: #EBE5FF;
+  --yellow: #D9F36A;
+  --cream: #F8F6F0;
+  --coral: #FF5C5C;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: #F8F6F0;
+  color: #30205C;
+  font-family: 'Nunito', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #30205C;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn {
+  from { transform: translateX(-10px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.animate-fadeIn { animation: fadeIn 0.3s ease forwards; }
+.animate-slideIn { animation: slideIn 0.2s ease forwards; }
+.animate-pulseSubtle { animation: pulseSubtle 3s ease-in-out infinite; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #C5B4FF; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #7655E9; }
